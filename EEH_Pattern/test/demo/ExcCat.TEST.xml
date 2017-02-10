@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+
+ Licensed Materials - Property of IBM
+ (C) Copyright IBM Corp. 2009 All Rights Reserved.
+ US Government Users Restricted Rights - Use, duplication or
+ disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+
+ Created January 2008, 2012
+
+-->
+<exc:ExceptionCatalog xmlns:exc="urn:com.ibm.mq.exc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:com.ibm.mq.exc ExceptionCatalog.xsd" name="ExcCat.TEST" version="1.0.0" expiry="604800" expiredQueue="Q.EEH.EXPIRED" appid="EEH" descr="Internal Exception Catalog for EEH.">  
+  <!-- *************************************************** 
+	     EXCEPTION CATAGORY = 00 => Not found: TODO
+	     *************************************************** -->  
+  <!--TODO: EEH Engineered -->
+  <Exception name="EMPTY_STACK_EXCEPTION" priority="1" descr="" code="90001">
+    <Parameter name="TODO" descr="Description of the exception"/>
+  </Exception>
+  <!--END: EEH Engineered-->
+  <!-- *************************************************** 
+	     EXCEPTION CATAGORY = 01 => Operating System Related 
+	     *************************************************** -->
+  <Exception name="INSTALL_PATH_UNDEF" priority="3" code="91001" descr="Installation path cannot be determined!"> 
+    <Parameter name="Key" descr="The key looked for in the environment variable."/> 
+  </Exception>  
+  <Exception name="HOST_UNKNOWN" priority="3" code="91002" descr="Host could not be deternimed!"/>  
+  <Exception name="FILE_NOT_FOUND" priority="3" code="91003" descr="File not found Error!"> 
+    <Parameter name="File" descr="Filename and path of the file that could not be located."/> 
+  </Exception>  
+  <Exception name="IO" priority="3" code="91004" descr="I/O Exception generated at runtime; please refer to the exception dump!"/>  
+  <Exception name="CLASS_UNDEF" priority="3" code="91005" descr="Class could not be found!"> 
+    <Parameter name="Class" descr="Class name that could not be located."/> 
+  </Exception>  
+  <Exception name="CLASS_INSTANTIATION_ERROR" priority="3" code="91006" descr="Class could not be found!"> 
+    <Parameter name="Class" descr="Class name that could not be located."/> 
+  </Exception>  
+  <Exception name="CLASS_ATTRIBUTE_UNDEF" priority="3" code="91007" descr="Class attibute looked up by reflection could not be found!"> 
+    <Parameter name="Class" descr="Class name."/>  
+    <Parameter name="Attribute" descr="Attribute name that could not be located."/> 
+  </Exception>  
+  <Exception name="CLASS_METHOD_UNDEF" priority="3" code="91008" descr="Class method looked up by reflection could not be found!"> 
+    <Parameter name="Class" descr="Class name."/>  
+    <Parameter name="Method" descr="Method name that could not be located."/> 
+  </Exception>  
+  <Exception name="CLASS_ATTRIBUTE_INVOKE_ERROR" priority="3" code="91009" descr="Class attibute looked up by reflection could not be invoked!"> 
+    <Parameter name="Class" descr="Class name."/>  
+    <Parameter name="Attribute" descr="Attribute name that could not be invoked."/> 
+  </Exception>  
+  <Exception name="CLASS_METHOD_INVOKE_ERROR" priority="3" code="91010" descr="Class method looked up by reflection could not be invoked!"> 
+    <Parameter name="Class" descr="Class name."/>  
+    <Parameter name="Method" descr="Method name that could not be invoked."/> 
+  </Exception>  
+  <Exception name="INERRUPTED" priority="2" code="91011" descr="The thread has been interrupted!"> 
+    <Parameter name="Message" descr="Interruption message."/> 
+  </Exception>  
+  <!-- ****************************************** 
+	     EXCEPTION CATAGORY = 02 => Network Related
+	     ****************************************** -->  
+  <!-- *******************************************
+	     EXCEPTION CATAGORY = 03 => Security Related
+	     ******************************************* -->  
+  <Exception name="FILE_SECURITY" priority="4" code="93001" descr="File or Directory is inaccessible in the path!"> 
+    <Parameter name="Path" descr="Path specified for File or Directory."/> 
+  </Exception>  
+  <Exception name="CLASS_INACCESSIBLE" priority="4" code="93002" descr="Class accessed violates security restrictions!"> 
+    <Parameter name="Class" descr="The class that is being accessed."/> 
+  </Exception>  
+  <Exception name="CLASS_ATTRIBUTE_INACCESSIBLE" priority="4" code="93003" descr="Class attribute accessed using reflections violates security restrictions!"> 
+    <Parameter name="Class" descr="Class Name."/>  
+    <Parameter name="Attribute" descr="Attribute name that could not be accessed."/> 
+  </Exception>  
+  <Exception name="CLASS_METHOD_INACCESSIBLE" priority="4" code="93004" descr="Class method accessed using reflections violates security restrictions!"> 
+    <Parameter name="Class" descr="Class Name."/>  
+    <Parameter name="Method" descr="Method name that could not be accessed."/> 
+  </Exception>  
+  <Exception name="DEF_CONSTR_INACCESSIBLE" priority="4" code="93005" descr="Default Class Constructor accessed violates security restrictions!"> 
+    <Parameter name="Class" descr="The class that is being attempted for instantiation."/> 
+  </Exception>  
+  <Exception name="CIPHER_ALG_UNDEF" priority="4" code="93006" descr="Cipher Alogorithm provided is not supported by the provider!"> 
+    <Parameter name="Algorithm" descr="Cipher Algorithm."/>  
+    <Parameter name="Message" descr="Exception Message."/> 
+  </Exception>  
+  <Exception name="CIPHER_PAD_UNDEF" priority="4" code="93007" descr="Padding with the Cipher Alogorithm provided is not supported by the provider!"> 
+    <Parameter name="Algorithm" descr="Cipher Algorithm."/>  
+    <Parameter name="Message" descr="Exception Message."/> 
+  </Exception>  
+  <Exception name="CIPHER_KEY_INVALID" priority="4" code="93008" descr="The Cipher Key provided for encryption or decryption is invalid!"> 
+    <Parameter name="Mode" descr="Cipher Mode = ENCRYPT_MODE or DECRYPT_MODE."/>  
+    <Parameter name="Message" descr="Exception Message."/> 
+  </Exception>  
+  <Exception name="CIPHER_BLOCK_SIZE" priority="4" code="93009" descr="The Cipher Block Size is invalid!"> 
+    <Parameter name="Message" descr="Exception Message."/> 
+  </Exception>  
+  <Exception name="CIPHER_BAD_PAD" priority="4" code="93010" descr="The Cipher Padding is invalid!"> 
+    <Parameter name="Message" descr="Exception Message."/> 
+  </Exception>  
+  <!-- *************************************************
+	     EXCEPTION CATAGORY = 04 => Data Integrity Related
+	     ************************************************* -->  
+  <Exception name="XML_VALIDATION" priority="3" code="94001" descr="XML Validation Error!"> 
+    <Parameter name="SystemId" descr="System identifier of the xml file."/>  
+    <Parameter name="Message" descr="Reason for the XML violation to occur."/>  
+    <Parameter name="ColumnNo" descr="Column number where the exception occerred."/>  
+    <Parameter name="LineNo" descr="Line number where the exception occurred."/>  
+    <Parameter name="PublicId" descr="External public Identifier if one exits."/> 
+  </Exception>  
+  <Exception name="XMLNS_VALIDATION" priority="3" code="94002" descr="XMLNS Validation Error! Valid XML Namespace is 'urn:com.ibm.mq.exc'."> 
+    <Parameter name="InvalidXMLNS" descr="Invalid XML Namespace."/> 
+  </Exception>  
+  <Exception name="CATALOG_NULL" priority="3" code="94003" descr="Exception Catalog has not been defined!"/>  
+  <Exception name="CATALOG_REDEF" priority="3" code="94004" descr="Exception Catalog is being redefined!"> 
+    <Parameter name="ExcCat" descr="Exception Catalog."/>  
+    <Parameter name="ExcCatVer" descr="Exception Catalog Version."/> 
+  </Exception>  
+  <Exception name="CATALOG_UNDEF" priority="3" code="94005" descr="Exception Catalog is not defined!"> 
+    <Parameter name="CallStack" descr="Call Stack of the original Exception."/>  
+    <Parameter name="ExcCat" descr="Exception Catalog."/>  
+    <Parameter name="ExcCatVer" descr="Exception Catalog Version."/> 
+  </Exception>  
+  <Exception name="APPID_REDEF" priority="3" code="94006" descr="Application Identifier is being redefined!"> 
+    <Parameter name="AppId_New" descr="New Application Identifier conflict."/>  
+    <Parameter name="AppId" descr="Application Identifier defined."/> 
+  </Exception>  
+  <Exception name="EXCEPTION_UNDEF" priority="3" code="94007" descr="Exception is not defined in the catalog!"> 
+    <Parameter name="CallStack" descr="Call Stack of the original Exception."/>  
+    <Parameter name="Exc" descr="Exception not found in the catalog."/>  
+    <Parameter name="ExcCat" descr="Exception Catalog."/>  
+    <Parameter name="ExcCatVer" descr="Exception Catalog Version."/> 
+  </Exception>  
+  <Exception name="PARM_INVALID" priority="3" code="94008" descr="Exception parameter is not valid for the Exception in the catalog!"> 
+    <Parameter name="CallStack" descr="Call Stack of the original Exception."/>  
+    <Parameter name="Parms" descr="Exception parameter not valid for the Exception."/>  
+    <Parameter name="InvalidParms" descr="Exception parameter not valid for the Exception."/>  
+    <Parameter name="Exc" descr="Exception found in the catalog."/>  
+    <Parameter name="ExcCat" descr="Exception Catalog."/>  
+    <Parameter name="ExcCatVer" descr="Exception Catalog Version."/> 
+  </Exception>  
+  <Exception name="QMGR_CONN_REDEF" priority="3" code="94009" descr="Queue Manager connection redefinition; one has already been defined!"> 
+    <Parameter name="QMgr" descr="Queue Manager being redefined."/> 
+  </Exception>  
+  <Exception name="REQUEUE_NOT_SET" priority="3" code="94010" descr="Re-Queue queue name has not been defined!"/>  
+  <Exception name="QUEUE_NOT_SET" priority="3" code="94011" descr="Queue name has not been defined!"/>  
+  <Exception name="DUMP_REDEF" priority="3" code="94012" descr="Exception Dump redefinition; one has already been defined!"> 
+    <Parameter name="DumpType" descr="The type of exception dump already set."/> 
+  </Exception>  
+  <Exception name="DUMP_UNSUPPORTED" priority="3" code="94013" descr="Exception Dump type is not supported! Supported types are binary, string, xml, java:Exception, java:DumpRenderer."> 
+    <Parameter name="DumpType" descr="The type of exception dump provided."/> 
+  </Exception>  
+  <Exception name="DATA_REDEF" priority="3" code="94014" descr="Data format type redefinition; one has already been defined!"> 
+    <Parameter name="DataType" descr="The type of data format already set."/> 
+  </Exception>  
+  <Exception name="DATA_UNSUPPORTED" priority="3" code="94015" descr="Exception Data format type is not supported! Supported types are binary, string, xml, java:MQMessage, java:JMSMessage, java:DataRenderer."> 
+    <Parameter name="DataType" descr="The type of Data format provided."/> 
+  </Exception>  
+  <Exception name="MALFORMED_URL" priority="3" code="94016" descr="URL provided was not formatted properly."> 
+    <Parameter name="URL" descr="Universal Resource Locator."/> 
+  </Exception>  
+  <Exception name="MANDATORY_PARM_MISSING" priority="3" code="94017" descr="Mandatory parameter is not specified."> 
+    <Parameter name="Source" descr="Reference to the source File, Object, etc. where the parameter is checked."/>  
+    <Parameter name="Parm" descr="Mandatory parameter."/> 
+  </Exception>  
+  <Exception name="PARM_PARSING_ERROR" priority="3" code="94018" descr="Error parsing the parameter to the specified class."> 
+    <Parameter name="Source" descr="Reference to the source File, Object, etc. where the parameter is checked."/>  
+    <Parameter name="Class" descr="Class or primitive the parameter value was to be parsed."/>  
+    <Parameter name="Parm" descr="Parameter."/>  
+    <Parameter name="Value" descr="Parameter value that could not be parsed."/> 
+  </Exception>  
+  <Exception name="ENV_REDEF" priority="3" code="94019" descr="Execution Environment redefinition; one has already been defined!"> 
+    <Parameter name="Environment" descr="The runtime environment already defined, e.g. DEV, TEST, QA, PROD."/> 
+  </Exception>  
+  <Exception name="CATALOG_IN_USE" priority="3" code="94020" descr="Exception Catalog is being used by the Exceptions stored in the database!"> 
+    <Parameter name="ExcCat" descr="Exception Catalog."/>  
+    <Parameter name="ExcCatVer" descr="Exception Catalog Version."/> 
+  </Exception>  
+  <Exception name="EXCEPTION_IN_USE" priority="3" code="94021" descr="Exception definition in the catalog is being used by the Exceptions stored in the database!"> 
+    <Parameter name="ExcCat" descr="Exception Catalog."/>  
+    <Parameter name="ExcCatVer" descr="Exception Catalog Version."/>  
+    <Parameter name="ExcCode" descr="Exception Code."/> 
+  </Exception>  
+  <Exception name="NULL_POINTER_EXCEPTION" priority="3" code="94996" descr="This is a Generic NULL pointer Java Exception."> 
+    <Parameter name="Cause" descr="Cause for Exception object generation."/>  
+    <Parameter name="Message" descr="Message generated by the Exception Object."/> 
+  </Exception>  
+  <Exception name="JAVA_EXCEPTION" priority="3" code="94997" descr="This is a Generic Java Exception class error."> 
+    <Parameter name="Cause" descr="Cause for Exception object generation."/>  
+    <Parameter name="Message" descr="Message generated by the Exception Object."/> 
+  </Exception>  
+  <Exception name="PARM_INVALID_INTERNAL" priority="4" code="94998" descr="Exception parameter is not valid for the Exception in the catalog ExcCat.ExcH ! This is an internal ExceptionHandler fatal error and is caught to avoid infinite recursive exception invokations."> 
+    <Parameter name="CallStack" descr="Call Stack of the original Exception."/>  
+    <Parameter name="Parms" descr="Exception parameter not valid for the Exception."/>  
+    <Parameter name="InvalidParms" descr="Exception parameter not valid for the Exception."/>  
+    <Parameter name="Exc" descr="Exception found in the catalog."/>  
+    <Parameter name="ExcCat" descr="Exception Catalog."/>  
+    <Parameter name="ExcCatVer" descr="Exception Catalog Version."/> 
+  </Exception>  
+  <Exception name="UNKNOWN" priority="4" code="94999" descr="An Unknown exception has occurred in the system. Please send the stack trace to arunava@us.ibm.com with the Subject as PMR:ExceptionHandler and your contact details."> 
+    <Parameter name="CallStack" descr="XML format of the call stack when the Exception was generated."/> 
+  </Exception>  
+  <!-- *********************************************
+	     EXCEPTION CATAGORY = 05 => Middleware Related
+	     ********************************************* -->  
+  <Exception name="WMQ" priority="3" code="95001" descr="WebSphere MQ error!"> 
+    <Parameter name="Reason" descr="Reason code returned form WMQ."/> 
+  </Exception>  
+  <Exception name="JMS" priority="3" code="95002" descr="Java Messaging Service error!"> 
+    <Parameter name="ErrorCode" descr="Error code returned form JMS vendor."/> 
+  </Exception>  
+  <Exception name="WMB" priority="3" code="95003" descr="ExceptionList object captured! This is a generic Exception caught inside the Message Flow and not intended to be used for User Exceptions that should be catagorized and analyzed."> 
+    <Parameter name="Type" descr="Source object type."/>  
+    <Parameter name="Function" descr="C++ source function name."/>  
+    <Parameter name="Catalog" descr="NLS message catalog name."/>  
+    <Parameter name="Text" descr="Additional text."/>  
+    <Parameter name="Label" descr="Source object label."/>  
+    <Parameter name="Line" descr="C++ source file line number."/>  
+    <Parameter name="Name" descr="Source object name."/>  
+    <Parameter name="ExceptionType" descr="The type of Exception that was generated. It is of the following types - RecoverableException, ParserException, ConversionException, DatabaseException, UserException, SecurityException, CastException, MessageException, SqlException, SocketException, SocketTimeoutException."/>  
+    <Parameter name="Number" descr="NLS message number."/>  
+    <Parameter name="File" descr="C++ source file name."/>  
+    <Parameter name="Severity" descr="1 = information, 2 = warning, 3 = error."/> 
+  </Exception>  
+  <Exception name="WMB_CMP_LOGGED" priority="3" code="95004" descr="Message Broker Config Manager Proxy API Logged error!"> 
+    <Parameter name="ServiceInfo" descr="The Service Information returned from the error in the CMP API."/> 
+  </Exception>  
+  <Exception name="WMB_CMP_PROP_INIT_ERROR" priority="3" code="95005" descr="Message Broker Config Manager Proxy API error initializing the Property object!"/>  
+  <Exception name="WMB_CONFIG_SERVICE_UNDEF" priority="3" code="95006" descr="Message Broker Configurable Service is not defined!"> 
+    <Parameter name="ConfigService" descr="The Configuration Service name looked up."/>  
+    <Parameter name="ConfigServiceType" descr="The type of the Configuration Service name looked up."/> 
+  </Exception>  
+  <Exception name="WMB_CONFIG_SERVICE_PROP_UNDEF" priority="3" code="95007" descr="Message Broker Configurable Service property is not defined in the Configurable Service!"> 
+    <Parameter name="ConfigServiceProp" descr="The Configuration Service property."/>  
+    <Parameter name="ConfigService" descr="The Configuration Service name looked up."/>  
+    <Parameter name="ConfigServiceType" descr="The type of the Configuration Service name looked up."/> 
+  </Exception>  
+  <!-- *******************************************
+	     EXCEPTION CATAGORY = 06 => Database Related
+	     ******************************************* -->  
+  <Exception name="SQL" priority="3" code="96001" descr="Database SQL error!"> 
+    <Parameter name="SQLCODE" descr="SQLCODE for the vender specific database error."/>  
+    <Parameter name="SQLMSG" descr="Message for the database error."/>  
+    <Parameter name="SQLSTATE" descr="SQLSTATE for the database error."/> 
+  </Exception>  
+  <!-- *************************************************
+	     EXCEPTION CATAGORY = 07 => User Interface Related
+	     ************************************************* -->  
+  <Exception name="ECLIPSE_CORE_EXCEPTION" priority="3" code="97001" descr="Eclipse Framework generated Core Exception."> 
+    <Parameter name="StatusCode" descr="Status Code."/>  
+    <Parameter name="StatusSeverity" descr="Status Severity."/>  
+    <Parameter name="StatusMessage" descr="Status Message."/>  
+    <Parameter name="ExceptionClass" descr="Low-level Exception Class name."/>  
+    <Parameter name="ExceptionCause" descr="Low-level Exception Cause."/>  
+    <Parameter name="ExceptionMessage" descr="Low-level Exception Message."/>  
+    <Parameter name="PluginId" descr="Unique Identifier for the Eclipse Plugin that caused the Exception condition."/> 
+  </Exception>  
+  <Exception name="ECLIPSE_PLUGIN_UPDATED" priority="1" code="97002" descr="Eclipse Plugin has been updated."> 
+    <Parameter name="Plugin" descr="Eclipse Plugin Id."/>  
+    <Parameter name="Version" descr="Eclipse Plugin Version."/> 
+  </Exception> 
+</exc:ExceptionCatalog>

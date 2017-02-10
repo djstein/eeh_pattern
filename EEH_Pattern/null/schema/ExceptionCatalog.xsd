@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:exc="urn:com.ibm.mq.exc" targetNamespace="urn:com.ibm.mq.exc">
+	<xsd:element name="ExceptionCatalog" type="exc:Typ.ExceptionCatalog">
+		<xsd:key name="excName">
+		  <xsd:selector xpath="Exception"/>
+		  <xsd:field xpath="@name"/>
+		</xsd:key>
+		<xsd:key name="excCode">
+		  <xsd:selector xpath="Exception"/>
+		  <xsd:field xpath="@code"/>
+		</xsd:key>
+	</xsd:element>
+	
+	<xsd:complexType name="Typ.ExceptionCatalog">
+		<xsd:sequence>
+			<xsd:element maxOccurs="unbounded" minOccurs="1" name="Exception" type="exc:Typ.Exception">
+				<xsd:key name="excParm">
+				  <xsd:selector xpath="Parameter"/>
+				  <xsd:field xpath="@name"/>
+				</xsd:key>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="name" type="xsd:string" use="required"/>
+		<xsd:attribute name="version" type="xsd:string" use="required"/>
+		<xsd:attribute name="appid" type="xsd:string" use="required"/>
+       	<xsd:attribute name="expiry" type="xsd:int" default="604800"/>
+       	<xsd:attribute name="expiredQueue" type="xsd:string" use="required"/>
+       	<xsd:attribute name="descr" type="xsd:string" use="required"/>
+    </xsd:complexType>
+	
+	<xsd:complexType name="Typ.Exception">
+		<xsd:sequence>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="Parameter">
+				<xsd:complexType>
+					<xsd:attribute name="name" type="xsd:string"/>
+					<xsd:attribute name="descr" type="xsd:string"/>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="name" type="xsd:string"/>
+		<xsd:attribute name="priority">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:int">
+					<xsd:minInclusive value="1"/>
+					<xsd:maxInclusive value="4"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="code" type="xsd:string"/>
+		<xsd:attribute name="descr" type="xsd:string"/>
+	</xsd:complexType>
+	
+</xsd:schema>

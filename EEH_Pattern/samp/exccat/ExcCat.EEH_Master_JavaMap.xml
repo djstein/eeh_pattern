@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+
+ Licensed Materials - Property of IBM
+ (C) Copyright IBM Corp. 2009 All Rights Reserved.
+ US Government Users Restricted Rights - Use, duplication or
+ disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+
+ Created January 2008, 2012
+
+-->
+<exc:ExceptionCatalog xmlns:exc="urn:com.ibm.mq.exc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:com.ibm.mq.exc ExceptionCatalogMap.xsd" language="Java" descr="Java Master Exception Mapping file.">  
+  <!-- *************************************************** 
+	     EXCEPTION CATAGORY = 00 => Not found: TODO
+	     *************************************************** -->  
+  <!--TODO: EEH Engineered -->  
+  <Exception name="EMPTY_STACK_EXCEPTION" class="TODO: Add correct import path"> 
+    <Parameter name="Cause" member="getPath" type="method"/>  
+    <Parameter name="Message" member="getMessge" type="method"/> 
+  </Exception>  
+  <!--END: EEH Engineered-->  
+  <!--TODO: EEH Engineered -->  
+  <Exception name="FILE_NOT_FOUND_EXCEPTION" class="TODO: Add correct import path"> 
+    <Parameter name="Cause" member="getPath" type="method"/>  
+    <Parameter name="Message" member="getMessge" type="method"/> 
+  </Exception>  
+  <!--END: EEH Engineered-->  
+  <!--TODO: EEH Engineered -->
+  <Exception name="BUG_IO_EXCEPTION" class="TODO: Add correct import path">
+    <Parameter name="Cause" member="getPath" type="method"/>
+    <Parameter name="Message" member="getMessge" type="method"/>
+  </Exception>
+  <!--END: EEH Engineered-->
+  <!-- *************************************************** 
+	     EXCEPTION CATAGORY = 01 => Operating System Related 
+	     *************************************************** -->
+  <Exception name="FILE_NOT_FOUND" class="java.io.FileNotFoundException"> 
+    <Parameter name="Path" member="getPath" type="method"/>  
+    <Parameter name="Cause" member="getCause" type="method"/>  
+    <Parameter name="Message" member="getMessage" type="method"/> 
+  </Exception>  
+  <Exception name="IO" class="java.io.IOException"> 
+    <Parameter name="Cause" member="getCause" type="method"/>  
+    <Parameter name="Message" member="getMessage" type="method"/> 
+  </Exception>  
+  <Exception name="CLASS_UNDEF" class="java.lang.ClassNotFoundException"> 
+    <Parameter name="Cause" member="getCause" type="method"/>  
+    <Parameter name="Message" member="getMessage" type="method"/> 
+  </Exception>  
+  <Exception name="CLASS_INSTANTIATION_ERROR" class="java.lang.InstantiationException"> 
+    <Parameter name="Cause" member="getCause" type="method"/>  
+    <Parameter name="Message" member="getMessage" type="method"/> 
+  </Exception>  
+  <!-- ****************************************** 
+	     EXCEPTION CATAGORY = 02 => Network Related
+	     ****************************************** -->  
+  <!-- *******************************************
+	     EXCEPTION CATAGORY = 03 => Security Related
+	     ******************************************* -->  
+  <Exception name="CIPHER_KEY_INVALID" class="java.security.InvalidKeyException"> 
+    <Parameter name="Cause" member="getCause" type="method"/>  
+    <Parameter name="Message" member="getMessage" type="method"/> 
+  </Exception>  
+  <Exception name="CIPHER_BLOCK_SIZE" class="java.crypto.IllegalBlockSizeException"> 
+    <Parameter name="Cause" member="getCause" type="method"/>  
+    <Parameter name="Message" member="getMessage" type="method"/> 
+  </Exception>  
+  <!-- *************************************************
+	     EXCEPTION CATAGORY = 04 => Data Integrity Related
+	     ************************************************* -->  
+  <Exception name="XML_VALIDATION" class="org.xml.sax.SAXException"> 
+    <Parameter name="SystemId" member="getSystemId" type="method"/>  
+    <Parameter name="Message" member="getMessage" type="method"/>  
+    <Parameter name="ColumnNo" member="getColumnNumber" type="method"/>  
+    <Parameter name="LineNo" member="getLineNumber" type="method"/>  
+    <Parameter name="PublicId" member="getPublicId" type="method"/> 
+  </Exception>  
+  <Exception name="MALFORMED_URL" class="java.net.MalformedURLException"> 
+    <Parameter name="Cause" member="getCause" type="method"/>  
+    <Parameter name="Message" member="getMessage" type="method"/> 
+  </Exception>  
+  <Exception name="NULL_POINTER_EXCEPTION" class="java.lang.NullPointerException"> 
+    <Parameter name="Cause" member="getCause" type="method"/>  
+    <Parameter name="Message" member="getMessage" type="method"/> 
+  </Exception>  
+  <Exception name="JAVA_EXCEPTION" class="java.lang.Exception"> 
+    <Parameter name="Cause" member="getCause" type="method"/>  
+    <Parameter name="Message" member="getMessage" type="method"/> 
+  </Exception>  
+  <!-- *********************************************
+	     EXCEPTION CATAGORY = 05 => Middleware Related
+	     ********************************************* -->  
+  <Exception name="WMQ"> 
+    <Parameter name="Cause" member="getCause" type="method"/>  
+    <Parameter name="Message" member="getMessage" type="method"/> 
+  </Exception>  
+  <Exception name="JMS" class="java.jms.JMSException"> 
+    <Parameter name="Cause" member="getCause" type="method"/>  
+    <Parameter name="Message" member="getMessage" type="method"/> 
+  </Exception>  
+  <Exception name="WMB" class="com.ibm.broker.plugin.MBUserException"> 
+    <Parameter name="Cause" member="getCause" type="method"/>  
+    <Parameter name="Message" member="getMessage" type="method"/> 
+  </Exception>  
+  <!-- *******************************************
+	     EXCEPTION CATAGORY = 06 => Database Related
+	     ******************************************* -->  
+  <Exception name="SQL" class="java.sql.SQLException"> 
+    <Parameter name="Cause" member="getCause" type="method"/>  
+    <Parameter name="Message" member="getMessage" type="method"/> 
+  </Exception>  
+  <!-- *************************************************
+	     EXCEPTION CATAGORY = 07 => User Interface Related
+	     ************************************************* -->  
+  <Exception name="ECLIPSE_CORE_EXCEPTION" class="org.eclipse.core.runtime.CoreException"> 
+    <Parameter name="Cause" member="getCause" type="method"/>  
+    <Parameter name="Message" member="getMessage" type="method"/> 
+  </Exception> 
+</exc:ExceptionCatalog>
